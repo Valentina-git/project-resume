@@ -15,10 +15,35 @@ body {
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
   /* background: #f5f7fa; */
-  background: rgb(187, 225, 238);
+  background: rgb(240, 240, 15);
   padding: 40px;
   font-family: Montserrat;
 }
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 624px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1080px;
+  }
+}
+
 .wrapper {
   background: #ffffff;
   /* background: lightblue; */
@@ -42,12 +67,14 @@ body {
 .sidebar {
   width: 300px;
   /* background: linear-gradient(-40deg, #557e08, #1c706f, #350da3); */
-  background: linear-gradient(-40deg, #f17c58, #24aadb, #557e08, #350da3);
+  /* background: linear-gradient(-40deg, #f17c58, #24aadb, #557e08, #350da3); */
+  background: linear-gradient(-40deg, #000000, #0f9b0f);
   background-size: 500% 500%;
   animation: gradient 5s ease infinite;
   color: #fff;
   padding: 60px 0;
 }
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
