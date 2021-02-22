@@ -3,29 +3,67 @@
   margin: 0;
   box-sizing: border-box;
 }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
   /* background: #f5f7fa; */
-  background: lightblue;
+  background: rgb(187, 225, 238);
   padding: 40px;
   font-family: Montserrat;
 }
 .wrapper {
   background: #ffffff;
+  /* background: lightblue; */
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
-  box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15); */
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-.sidebar {
+
+/* .sidebar {
   background: #1e2939;
   width: 300px;
   padding-top: 40px;
   padding-bottom: 40px;
+} */
+
+.sidebar {
+  width: 300px;
+  /* background: linear-gradient(-40deg, #557e08, #1c706f, #350da3); */
+  background: linear-gradient(-40deg, #f17c58, #24aadb, #557e08, #350da3);
+  background-size: 500% 500%;
+  animation: gradient 5s ease infinite;
+  color: #fff;
+  padding: 60px 0;
 }
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .my-photo {
   width: 300px;
 }
+
 .about-me-container {
   padding-left: 90px;
   padding-right: 90px;
@@ -45,18 +83,20 @@ body {
   color: #ffffff;
   margin-bottom: 20px;
 }
+
 .contacts-link {
-  color: #d1caca;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
+  color: #d1caca;
+  text-decoration: none;
 }
 .contacts-link-type {
+  margin-right: 10px;
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
   color: #ffffff;
-  margin-right: 10px;
 }
 
 .tech-Skills-title {
@@ -129,11 +169,13 @@ body {
   line-height: 24px;
   margin-bottom: 15px;
 }
+
 .projects-link {
   color: #595959;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
+  text-decoration: none;
 }
 .tech-name {
   color: #595959;
@@ -184,4 +226,8 @@ body {
 }
 .profession-specialization {
   margin-bottom: 15px;
+}
+
+a:hover {
+  color: #ff6b08; /* Цвет текста */
 }
